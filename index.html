@@ -9,15 +9,30 @@
 <body>
     <header class="header">
         <div class="container">
-            <h1>DOKUMEN FAKULTAS ILMU KESEHATAN<br>UNIVERSITAS FALETEHAN</h1>
-            <p class="subtitle">Akses lengkap dokumen-dokumen akademik, administratif, dan non akademik</p>
+            <div class="header-content">
+                <img src="logo.jpeg" alt="Logo" class="header-logo">
+                <h1>DOKUMEN<br>FAKULTAS ILMU KESEHATAN<br>UNIVERSITAS FALETEHAN</h1>
+            </div>
+            <p class="subtitle">Akses lengkap dokumen-dokumen akademik, non akademik dan administratif</p>
 
         </div>
     </header>
 
+    <nav class="quick-nav">
+        <select id="jumpSelect" class="jump-dropdown" onchange="jumpToSection()">
+            <option value="">-- Pencarian Bagian Dokumen --</option>
+            <option value="senat">Dokumen Senat Fakultas</option>
+            <option value="akademik">Dokumen Akademik Fakultas & Non Fakultas</option>
+            <option value="s2">Prodi S2 Kesehatan Masyarakat</option>
+            <option value="s1">Prodi S1 Kesehatan Masyarakat</option>
+            <option value="keperawatan-ners">Prodi S1 Keperawatan & Profesi Ners</option>
+            <option value="kebidanan">Prodi S1 Kebidanan & Pendidikan Profesi Bidan</option>
+            <option value="d3-keperawatan">Prodi D III Keperawatan</option>
+        </select>
+    </nav>
     <main class="container">
         <!-- SENAT SECTION -->
-        <section class="section">
+        <section class="section" id="senat">
             <h2 class="section-title">DOKUMEN SENAT FAKULTAS</h2>
             <div class="category-grid">
                 <div class="doc-card">
@@ -64,7 +79,7 @@
         </section>
 
         <!-- FAKULTAS SECTION -->
-        <section class="section">
+        <section class="section" id="akademik">
             <h2 class="section-title">DOKUMEN AKADEMIK FAKULTAS DAN NON FAKULTAS</h2>
             <div class="category-grid">
                 <div class="doc-card">
@@ -119,7 +134,7 @@
         <section class="section">
             <h2 class="section-title">DOKUMEN PROGRAM STUDI</h2>
             
-            <h3 class="program-title">S2 Kesehatan Masyarakat</h3>
+            <h3 class="program-title" id="s2">S2 Kesehatan Masyarakat</h3>
             <div class="category-grid">
                 <div class="doc-card">
                     <h3>VMTS</h3>
@@ -142,8 +157,8 @@
                     <a href="https://drive.google.com/drive/folders/14Q3tF61abON40DM0N0TYHBdG8ZTn4007?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
-                    <h3>RPS</h3>
-                    <p>Rencana Pembelajaran Semester</p>
+                    <h3>Rancangan Pengajaran</h3>
+                    <p>Rancangan Pengajaran Semester</p>
                     <a href="https://drive.google.com/drive/folders/1df6SisayF6DOGE5CDr3OV-TqsSe-JA10?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
@@ -169,7 +184,7 @@
             </div>
         </section>
 
-            <h3 class="program-title">S1 Kesehatan Masyarakat</h3>
+            <h3 class="program-title" id="s1">S1 Kesehatan Masyarakat</h3>
             <div class="category-grid">
                 <div class="doc-card">
                     <h3>VMTS</h3>
@@ -192,8 +207,8 @@
                     <a href="https://drive.google.com/drive/folders/1woD9DrJVb0rey17eKyvUzKZQvZQYZNhZ?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
-                    <h3>RPS</h3>
-                    <p>Rencana Pembelajaran Semester</p>
+                    <h3>Rancangan Pengajaran</h3>
+                    <p>Rancangan Pengajaran Semester</p>
                     <a href="https://drive.google.com/drive/folders/1w7-FlmtjgnB6xXXAf4ynxeq-vYHMkDet?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
@@ -219,7 +234,7 @@
             </div>
         </section>
 
-            <h3 class="program-title">S1 Keperawatan dan Profesi Ners</h3>
+            <h3 class="program-title" id="keperawatan-ners">S1 Keperawatan dan Profesi Ners</h3>
             <div class="category-grid">
                 <div class="doc-card">
                     <h3>VMTS</h3>
@@ -242,8 +257,8 @@
                     <a href="https://drive.google.com/drive/folders/1KOn0bJ0nRmRiRF10jXbA_1X2XnOO1ges?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
-                    <h3>RPS</h3>
-                    <p>Rencana Pembelajaran Semester</p>
+                    <h3>Rancangan Pengajaran</h3>
+                    <p>Rancangan Pengajaran Semester</p>
                     <a href="https://drive.google.com/drive/folders/1NjafkLL_D23Rml59tC8PYGuEvbbk8hEf?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
@@ -269,7 +284,7 @@
             </div>
         </section>
 
-            <h3 class="program-title">S1 Kebidanan dan Pendidikan Profesi Bidan</h3>
+            <h3 class="program-title" id="kebidanan">S1 Kebidanan dan Pendidikan Profesi Bidan</h3>
             <div class="category-grid">
                 <div class="doc-card">
                     <h3>VMTS</h3>
@@ -292,8 +307,8 @@
                     <a href="https://drive.google.com/drive/folders/1-1kMtSVKzzIiJrw1PqvXZOPKi9eI22zt?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
-                    <h3>RPS</h3>
-                    <p>Rencana Pembelajaran Semester</p>
+                    <h3>Rancangan Pengajaran</h3>
+                    <p>Rancangan Pengajaran Semester</p>
                     <a href="https://drive.google.com/drive/folders/1eUfjtkD-DOmR4__Y9Ax6LInzn0Ad7URo?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
@@ -319,7 +334,7 @@
             </div>
         </section>
 
-            <h3 class="program-title">D III Keperawatan</h3>
+            <h3 class="program-title" id="d3-keperawatan">D III Keperawatan</h3>
             <div class="category-grid">
                 <div class="doc-card">
                     <h3>VMTS</h3>
@@ -342,8 +357,8 @@
                     <a href="https://drive.google.com/drive/folders/1H9X_ZNTdNXy9rjqK72ihrzEPKgqxaDPe?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
-                    <h3>RPS</h3>
-                    <p>Rencana Pembelajaran Semester</p>
+                    <h3>Rancangan Pengajaran</h3>
+                    <p>Rancangan Pengajaran Semester</p>
                     <a href="https://drive.google.com/drive/folders/1caZGR5KKSabAFE3zGV0IUkjfXCv0AILF?usp=drive_link" target="_blank" class="btn">Buka Folder</a>
                 </div>
                 <div class="doc-card">
@@ -387,6 +402,17 @@
                 window.open(url, '_blank');
             } else {
                 alert('Silakan pilih pedoman terlebih dahulu');
+            }
+        }
+
+        function jumpToSection() {
+            const sel = document.getElementById('jumpSelect');
+            const id = sel.value;
+            if (id) {
+                const target = document.getElementById(id);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         }
     </script>
