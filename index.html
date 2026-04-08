@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pusat Dokumen - Universitas Faletehan</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Check if user is authenticated
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('pusatdokumen_authenticated') !== 'true') {
+                window.location.href = 'login.html';
+            }
+        });
+        
+        function logout() {
+            sessionStorage.removeItem('pusatdokumen_authenticated');
+            window.location.href = 'login.html';
+        }
+    </script>
 </head>
 <body>
     <header class="header">
         <div class="container">
+            <button class="logout-btn" onclick="logout()">Logout</button>
             <div class="header-content">
                 <img src="logo.png" alt="Logo" class="header-logo">
                 <h1>DOKUMEN<br>FAKULTAS ILMU KESEHATAN<br>UNIVERSITAS FALETEHAN</h1>
