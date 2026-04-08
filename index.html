@@ -6,15 +6,14 @@
     <title>Pusat Dokumen - Universitas Faletehan</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        // Check if user is authenticated
+        // Simple authentication check using URL hash
         window.addEventListener('load', function() {
-            if (sessionStorage.getItem('pusatdokumen_authenticated') !== 'true') {
+            if (window.location.hash !== '#authenticated') {
                 window.location.href = 'login.html';
             }
         });
-        
+
         function logout() {
-            sessionStorage.removeItem('pusatdokumen_authenticated');
             window.location.href = 'login.html';
         }
     </script>
